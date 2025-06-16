@@ -6,7 +6,7 @@ resource "grafana_synthetic_monitoring_check" "Synthetics_BrowserCheck_login" {
   enabled   = true
   probes    = [data.grafana_synthetic_monitoring_probes.main.probes.London]
   labels    = {}
-  frequency = 300000
+  frequency = 300001
   timeout   = 60000
   settings {
     browser {
