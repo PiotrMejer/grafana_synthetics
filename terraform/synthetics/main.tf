@@ -6,7 +6,7 @@ resource "grafana_synthetic_monitoring_check" "Synthetics_BrowserCheck_login" {
   enabled   = true
   probes    = [data.grafana_synthetic_monitoring_probes.main.probes.London]
   labels    = {}
-  frequency = 300000
+  frequency = 60000
   timeout   = 60000
   settings {
     browser {
@@ -23,7 +23,7 @@ resource "grafana_synthetic_monitoring_check" "Synthetics_HttpCheck_crocodiles" 
   job       = "Synthetics:HttpCheck"
   target    = "crocodiles"
   enabled   = true
-  probes    = [data.grafana_synthetic_monitoring_probes.main.probes.Frankfurt,]
+  probes    = [data.grafana_synthetic_monitoring_probes.main.probes.Frankfurt, ]
   labels    = {}
   frequency = 300000
   timeout   = 60000
